@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@import "swiper/swiper-bundle.css";
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --color-bg: #f9fafb;
+  --color-card: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-border: #e2e8f0;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0f172a;
+  --color-card: #1e293b;
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #60a5fa;
+  --color-border: #1e293b;
+}
+
+h1,
+h2 {
+  font-family: "Clash Display", sans-serif;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Satoshi", sans-serif;
+  font-size: clamp(1rem, calc(0.5vw + 0.75rem), 1.125rem);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+  font-family: "Satoshi", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: clamp(0.9rem, calc(0.4vw + 0.6rem), 1rem);
+  color: white;
+  background-color: var(--color-accent);
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.github {
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/github.webp");
+  background-color: white;
+  border-radius: 50%;
+}
